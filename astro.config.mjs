@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   site: 'https://Milieth.github.io',
-  base: '/gamedev-portofolio',
+  base: '/gamedev-portfolio',
   vite: {
     plugins: [tailwindcss()]
   },
