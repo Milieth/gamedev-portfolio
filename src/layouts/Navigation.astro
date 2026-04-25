@@ -2,20 +2,12 @@
 import ButtonGroup from "@/components/bearnie/button-group/ButtonGroup.astro"
 import Button from "@/components/bearnie/button/Button.astro"
 ---
-<style>
-  header{
-    display:flex;
-    justify-content: center;
-    padding-top: 2rem;
-  }
-</style>
-<header>
+<header class="flex justify-center py-8">
     <ButtonGroup>
-    <Button variant="secondary" size="lg">About Me</Button>
-    <Button variant="secondary" size="lg">My Games</Button>
-    <Button variant="secondary" size="lg">Other Project</Button>
-    <Button variant="secondary" size="lg">Resume</Button>
-    <Button variant="secondary" size="lg">About Commission</Button>
-    <Button variant="secondary" size="lg">Contact</Button>
+    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio">About Me</Button>
+    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/my-games">My Games</Button>
+    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/resume">Resume</Button>
+    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/commission">About Commission</Button>
+    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/contact">Contact</Button>
     </ButtonGroup>       
 </header>
