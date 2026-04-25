@@ -1,5 +1,7 @@
 ---
 import "@/styles/global.css";
+import Navigation from "./Navigation.astro";
+import Footer from "./Footer.astro";
 
 interface Props {
   title?: string;
@@ -33,6 +35,8 @@ const {
     <link rel="icon" type="image/svg+xml" href="/gamedev-portfolio/favicon.svg" />
   </head>
   <body class="min-h-screen bg-background text-foreground antialiased">
+    <Navigation></Navigation>
     <slot />
+    <Footer></Footer>
   </body>
 </html>

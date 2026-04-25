@@ -6,13 +6,8 @@ import CardContent from "@/components/bearnie/card/CardContent.astro"
 import CardTitle from "@/components/bearnie/card/CardTitle.astro"
 import CardDescription from "@/components/bearnie/card/CardDescription.astro"
 import CardFooter from "@/components/bearnie/card/CardFooter.astro"
-import Navigation from "@/layouts/Navigation.astro";
-import Footer from "@/layouts/Footer.astro";
 ---
 <BaseLayout title="Milieth's Website">
-  <Navigation></Navigation>
-  <main class="min-h-screen flex flex-col">
-    <!-- Hero -->
     <section class="flex-1 flex items-center justify-center mt-16 px-4">
       <Card class="w-[500px] text-center">
         <!-- Bearnie Logo -->
@@ -41,6 +36,4 @@ import Footer from "@/layouts/Footer.astro";
         </p>
       </Card>
     </section>
-    <Footer></Footer>
-  </main>
 </BaseLayout>
