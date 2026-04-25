@@ -1,13 +1,38 @@
 ---
 import ButtonGroup from "@/components/bearnie/button-group/ButtonGroup.astro"
 import Button from "@/components/bearnie/button/Button.astro"
+import DropdownMenu from "@/components/bearnie/dropdown-menu/DropdownMenu.astro";
+import DropdownMenuContent from "@/components/bearnie/dropdown-menu/DropdownMenuContent.astro";
+import DropdownMenuItem from "@/components/bearnie/dropdown-menu/DropdownMenuItem.astro";
+import DropdownMenuLabel from "@/components/bearnie/dropdown-menu/DropdownMenuLabel.astro";
+import DropdownMenuSeparator from "@/components/bearnie/dropdown-menu/DropdownMenuSeparator.astro";
+import DropdownMenuTrigger from "@/components/bearnie/dropdown-menu/DropdownMenuTrigger.astro";
+
 ---
-<header class="flex justify-center py-8">
-    <ButtonGroup>
-    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio">About Me</Button>
-    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/my-games">My Games</Button>
-    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/resume">Resume</Button>
-    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/commission">About Commission</Button>
-    <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/contact">Contact</Button>
-    </ButtonGroup>       
+<header class="flex items-center justify-between px-4 py-8">
+    <div class="flex-1 sm:hidden"></div>
+    <div class="sm:hidden">
+        <DropdownMenu>
+            <DropdownMenuTrigger>
+                <Button class="text-xl px-6 py-4" variant="secondary">Menu</Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+                <DropdownMenuItem class="text-xl px-6 py-1" href="/gamedev-portfolio">About Me</DropdownMenuItem>
+                <DropdownMenuItem class="text-xl px-6 py-1" href="/gamedev-portfolio/my-games">My Games</DropdownMenuItem>
+                <DropdownMenuItem class="text-xl px-6 py-1" href="/gamedev-portfolio/resume">Resume</DropdownMenuItem>
+                <DropdownMenuItem class="text-xl px-6 py-1" href="/gamedev-portfolio/commission">Commission</DropdownMenuItem>
+                <DropdownMenuItem class="text-xl px-6 py-1" href="/gamedev-portfolio/contact">Contact</DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
+    </div>
+
+    <div class="hidden sm:flex sm:w-full sm:justify-center">
+        <ButtonGroup>
+            <Button variant="secondary" pill size="lg" href="/gamedev-portfolio">About Me</Button>
+            <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/my-games">My Games</Button>
+            <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/resume">Resume</Button>
+            <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/commission">Commission</Button>
+            <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/contact">Contact</Button>
+        </ButtonGroup>
+    </div>
 </header>

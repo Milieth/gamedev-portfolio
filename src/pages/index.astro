@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import Card from "@/components/bearnie/card/Card.astro"
+import CardHeader from "@/components/bearnie/card/CardHeader.astro"
+import CardContent from "@/components/bearnie/card/CardContent.astro"
+import CardTitle from "@/components/bearnie/card/CardTitle.astro"
+import CardDescription from "@/components/bearnie/card/CardDescription.astro"
+import CardFooter from "@/components/bearnie/card/CardFooter.astro"
 import Navigation from "@/layouts/Navigation.astro";
 import Footer from "@/layouts/Footer.astro";
 ---
@@ -7,8 +13,8 @@ import Footer from "@/layouts/Footer.astro";
   <Navigation></Navigation>
   <main class="min-h-screen flex flex-col">
     <!-- Hero -->
-    <section class="flex-1 flex items-center justify-center px-4">
-      <div class="max-w-sm text-center mx-auto">
+    <section class="flex-1 flex items-center justify-center mt-16 px-4">
+      <Card class="w-[500px] text-center">
         <!-- Bearnie Logo -->
         <svg
           class="size-16 lg:size-20 mx-auto"
@@ -24,33 +30,16 @@ import Footer from "@/layouts/Footer.astro";
           />
         </svg>
 
-        <h1 class="text-lg font-medium font-extrabold tracking-tight mt-12">
+        <h1 class="text-lg font-medium font-extrabold tracking-tight mt-4">
           Welcome to my personal website
         </h1>
 
-        <p class="text-base text-muted-foreground mt-4">
-          I am Milieth a Gamedev Programmer, locate in Kediri, East Java, Indonesia. You can see my games here, I may available for commision too. Feel free to explore this website.
+        <p class="text-base text-muted-foreground m-4 mb-16">
+          I am Milieth, a Gamedev Programmer located in Kediri, East Java, Indonesia. 
+          You can see my games <a href="/gamedev-portfolio/my-games" class="text-primary underline">here</a>. 
+          I may be available for <a href="/gamedev-portfolio/commission" class="text-primary underline">commission</a> too. Feel free to explore this website.
         </p>
-
-        <div class="flex items-center gap-2.5 mt-12 justify-center">
-          <a
-            href="https://bearnie.dev/docs"
-            class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
-          >
-            Get Started
-          </a>
-          <a
-            href="https://bearnie.dev/docs/components"
-            class="inline-flex items-center justify-center rounded-lg border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors"
-          >
-            Browse Components
-          </a>
-        </div>
-
-        <code class="mt-8 block text-xs text-muted-foreground font-mono">
-          npx bearnie add button
-        </code>
-      </div>
+      </Card>
     </section>
     <Footer></Footer>
   </main>
