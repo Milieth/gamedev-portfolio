@@ -1,12 +1,66 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Navigation from "@/layouts/Navigation.astro";
+import Button from "@/components/bearnie/button/Button.astro";
+
+const iconSize = 50;
+const buttonSize = iconSize + 5;
+
+const socialLinks = [
+  {
+    name: "Gmail",
+    url: "mailto:pravda.mahyun@gmail.com",
+    icon: "/gamedev-portfolio/gmail.png",
+  },
+  {
+    name: "Github",
+    url: "https://github.com/Milieth",
+    icon: "/gamedev-portfolio/github.png",
+  },
+  {
+    name: "Discord",
+    url: "https://discord.com/users/415050487222501377",
+    icon: "/gamedev-portfolio/discord.png",
+  },
+  {
+    name: "Itch.io",
+    url: "https://milieth.itch.io/",
+    icon: "/gamedev-portfolio/itchio.png",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/pravda.mahyun/",
+    icon: "/gamedev-portfolio/facebook.png",
+  },
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/mili-eth-ba2915377/",
+    icon: "/gamedev-portfolio/linkedin.png",
+  },
+];
 ---
 
-<BaseLayout title="Milieth's Commission Page">
-    <div class="relative h-20">
-        <h1 class="text-4xl">
+<BaseLayout title="Milieth's Contact">
+    <section class="m-4">
+        <p>Feel free to get in touch, I love discussing about math and program, or maybe you just want to say hi?</p>
+        <p>Note: if you want fast respond, send me an email, thanks.</p>
+        <h1 class="text-4xl mt-2">
             Contact List:
         </h1>
-    </div>
+        {socialLinks.map((link) => (
+            <Button 
+                class={`w-[170px] flex justify-start items-center px-4 mt-2`}
+                style={{ height: `${buttonSize}px` }} 
+                href={link.url}
+            >
+                <img 
+                    src={link.icon}
+                    alt={`${link.name} icon`}
+                    style={{ height: `${iconSize}px` }}
+                    class="mr-2"
+                    slot="left-icon"
+                />
+                {link.name}
+            </Button>                
+        ))}
+    </section>
 </BaseLayout>
