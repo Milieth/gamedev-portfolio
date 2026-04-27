@@ -4,9 +4,46 @@ import Navigation from "@/layouts/Navigation.astro";
 ---
 
 <BaseLayout title="Milieth's Resume">
-    <div class="relative h-20">
-        <h1 class="absolute bottom-4 left-4 text-4xl">
-            Resume:
+    <section class="m-4">
+        <h1 class="text-6xl mb-10">
+            Resume
         </h1>
-    </div>
+        <p>I have been developing games for about 2 years now,  the games have different genres such as: 
+            Visual Novel, Board Game, Simulation Game, Economic Simulation, and Point-and-Click. you can 
+            see them in <a href="/gamedev-portfolio/my-games" class="text-primary underline">my games.</a></p>
+        <h2 class="text-2xl mt-2">A. Programming Languagges:</h2>
+        <ul class="ml-8 space-y-2">
+            <li class="flex items-center gap-2">
+                <img src="/gamedev-portfolio/cpp.png" class="w-6 h-6" alt="C++ Icon"/>
+                <span>C++</span>
+            </li>
+            <li class="flex items-center gap-2">
+                <img src="/gamedev-portfolio/csharp.png" class="w-6 h-6" alt="C# Icon"/>
+                <span>C#</span>
+            </li>
+            <li class="flex items-center gap-2">
+                <img src="/gamedev-portfolio/python.png" class="w-6 h-6" alt="Python Icon"/>
+                <span>Python</span>
+            </li>
+            <li class="flex items-center gap-2">
+                <img src="/gamedev-portfolio/renpy.png" class="w-6 h-6" alt="Renpy Icon"/>
+                <span>Renpy Script</span>
+            </li>
+        </ul>
+        <h2 class="text-2xl mt-4">B. Familiar Game Engine:</h2>
+        <ul class="ml-8 space-y-2">
+            <li class="flex items-center gap-2">
+                <img src="/gamedev-portfolio/godot.png" class="w-6 h-6" alt="Godot Icon"/>
+                <span>Godot</span>
+            </li>
+            <li class="flex items-center gap-2">
+                <img src="/gamedev-portfolio/axmol.png" class="w-6 h-6" alt="Axmol Icon"/>
+                <span>Axmol (for performance peak)</span>
+            </li>
+            <li class="flex items-center gap-2">
+                <img src="/gamedev-portfolio/renpy.png" class="w-6 h-6" alt="Renpy Icon"/>
+                <span>Renpy</span>
+            </li>
+        </ul>
+    </section>
 </BaseLayout>
