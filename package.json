@@ -8,8 +8,10 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@hugeicons/core-free-icons": "^4.1.1",
     "astro": "^5.16.15",
     "clsx": "^2.1.1",
+    "keen-slider": "^6.8.6",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
