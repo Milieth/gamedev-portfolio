@@ -6,32 +6,42 @@ import CarouselItem from "@/components/bearnie/carousel/CarouselItem.astro";
 import CarouselNext from "@/components/bearnie/carousel/CarouselNext.astro";
 import CarouselPrevious from "@/components/bearnie/carousel/CarouselPrevious.astro";
 import CarouselDots from "@/components/bearnie/carousel/CarouselDots.astro";
+import GameCard from "@/components/GameCard.astro";
 ---
 
 <BaseLayout title="Milieth's Games">
-    <h1 class="text-4xl">
-        My Games:
+    <h1 class="text-4xl flex justify-center">
+        My Games
     </h1>
- <Carousel class="w-full max-w-md">
-  <CarouselContent>
-    <CarouselItem>
-      <div class="flex aspect-video items-center justify-center rounded-lg bg-muted">
-        <span class="text-2xl font-semibold">Slide 1</span>
-      </div>
-    </CarouselItem>
-    <CarouselItem>
-      <div class="flex aspect-video items-center justify-center rounded-lg bg-muted">
-        <span class="text-2xl font-semibold">Slide 2</span>
-      </div>
-    </CarouselItem>
-    <CarouselItem>
-      <div class="flex aspect-video items-center justify-center rounded-lg bg-muted">
-        <span class="text-2xl font-semibold">Slide 3</span>
-      </div>
-    </CarouselItem>
-  </CarouselContent>
-  <CarouselPrevious />
-  <CarouselNext />
-  <CarouselDots count={3} />
-</Carousel> 
+  <section class="flex justify-center"> 
+    <Carousel class="w-full max-w-5xl" loop={true} autoplay={true}>
+      <CarouselContent>
+        <CarouselItem>
+          <GameCard 
+          title="Masteria Land: Dungeon's Reward"
+          image="/gamedev-portfolio/games-ss/masteria-land.jpg"
+          link="https://milieth.itch.io/masteria-land-dungeons-reward"
+          tags={[
+            { name: "Visual Novel", color: "bg-red-600/80" },
+            { name: "Narrative Game", color: "bg-blue-600/80" },
+            { name: "Renpy", color: "bg-purple-600/80" }]} />
+          </CarouselItem>
+          <CarouselItem>
+            <GameCard
+            title="Half Moon Duel"
+            image="/gamedev-portfolio/games-ss/half-moon-duel.png"
+            link="https://milieth.itch.io/masteria-land-dungeons-reward"
+            tags={[
+                  { name: "Fan Made", color: "bg-purple-500/80" },
+                  { name: "Board Game", color: "bg-red-600/80" },
+                  { name: "LAN", color: "bg-blue-600/80" },
+                  { name: "Multiplayer", color: "bg-purple-700/80" },
+                  { name: "C#", color: "bg-green-600/80" }]} />
+          </CarouselItem>
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+      <CarouselDots count={2} />
+   </Carousel> 
+  </section>
 </BaseLayout>
