@@ -7,6 +7,7 @@ import DropdownMenuItem from "@/components/bearnie/dropdown-menu/DropdownMenuIte
 import DropdownMenuLabel from "@/components/bearnie/dropdown-menu/DropdownMenuLabel.astro";
 import DropdownMenuSeparator from "@/components/bearnie/dropdown-menu/DropdownMenuSeparator.astro";
 import DropdownMenuTrigger from "@/components/bearnie/dropdown-menu/DropdownMenuTrigger.astro";
+import ThemeToggle from "@/components/ThemeToggle.astro";
 
 ---
 <header class="flex items-center justify-between px-4 py-8">
@@ -34,5 +35,6 @@ import DropdownMenuTrigger from "@/components/bearnie/dropdown-menu/DropdownMenu
             <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/commission">Commission</Button>
             <Button variant="secondary" pill size="lg" href="/gamedev-portfolio/contact">Contact</Button>
         </ButtonGroup>
+        <ThemeToggle />
     </div>
 </header>
