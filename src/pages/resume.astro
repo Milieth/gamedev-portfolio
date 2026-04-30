@@ -8,50 +8,71 @@ import CardTitle from "@/components/bearnie/card/CardTitle.astro";
 ---
 
 <BaseLayout title="Milieth's Resume">
-    <div class="flex w-full justify-center mt-8">
-        <Card class="w-[800px]">
+    <div class="flex w-full justify-center mt-8 px-4">
+        <Card class="w-full max-w-[800px]">
             <CardHeader>
                 <CardTitle class="text-4xl text-center">Resume</CardTitle>
             </CardHeader>
             <Separator class="bg-zinc-400" />
-            <CardContent class="mt-2">
-                <p class="text-gray-400">I have been developing games for about 2 years now,  the games have different genres such as: 
+            <CardContent class="mt-6 space-y-6">
+                <p class="text-zinc-300 leading-relaxed">
+                    I have been developing games for about 2 years now,  the games have different genres such as: 
                     Visual Novel, Board Game, Simulation Game, Economic Simulation, and Point-and-Click. you can 
-                    see them in <a href="/gamedev-portfolio/my-games" class="text-primary underline">my games.</a></p>
-                <h2 class="text-2xl mt-4">A. Programming Languagges:</h2>
-                <ul class="ml-8 space-y-2">
-                    <li class="flex items-center gap-2">
-                        <img src="/gamedev-portfolio/icons/cpp.png" class="w-6 h-6" alt="C++ Icon"/>
-                        <span>C++</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <img src="/gamedev-portfolio/icons/csharp.png" class="w-6 h-6" alt="C# Icon"/>
-                        <span>C#</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <img src="/gamedev-portfolio/icons/python.png" class="w-6 h-6" alt="Python Icon"/>
-                        <span>Python</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <img src="/gamedev-portfolio/icons/renpy.png" class="w-6 h-6" alt="Renpy Icon"/>
-                        <span>Renpy Script</span>
-                    </li>
-                </ul>
-                <h2 class="text-2xl mt-4">B. Familiar Game Engine:</h2>
-                <ul class="ml-8 space-y-2">
-                    <li class="flex items-center gap-2">
-                        <img src="/gamedev-portfolio/icons/godot.png" class="w-6 h-6" alt="Godot Icon"/>
-                        <span>Godot</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <img src="/gamedev-portfolio/icons/axmol.png" class="w-6 h-6" alt="Axmol Icon"/>
-                        <span>Axmol (for performance peak)</span>
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <img src="/gamedev-portfolio/icons/renpy.png" class="w-6 h-6" alt="Renpy Icon"/>
-                        <span>Renpy</span>
-                    </li>
-                </ul>
+                    see them in <a href="/gamedev-portfolio/my-games" class="text-primary underline">my games.</a>
+                    </p>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-3">Programming Languages</h2>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 ml-4">
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/cpp.png" class="w-6 h-6" alt=""/>
+                            <span>C++</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/csharp.png" class="w-6 h-6" alt=""/>
+                            <span>C#</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/python.png" class="w-6 h-6" alt=""/>
+                            <span>Python</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/renpy.png" class="w-6 h-6" alt=""/>
+                            <span>Ren'py Script</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-semibold mb-3">Game Engines</h2>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 ml-4">
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/godot.png" class="w-6 h-6" alt=""/>
+                            <span>Godot</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/axmol.png" class="w-6 h-6" alt=""/>
+                            <span>Axmol <span class="text-sm text-zinc-500">(High Performance)</span></span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/renpy.png" class="w-6 h-6" alt=""/>
+                            <span>Ren'py</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-semibold mb-3">Other Tool</h2>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 ml-4">
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/medibang.png" class="w-6 h-6" alt=""/>
+                            <span>Medibang Paint</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <img src="/gamedev-portfolio/icons/vscode.png" class="w-6 h-6" alt=""/>
+                            <span>VS Code</span>
+                        </li>
+                    </ul>
+                </div>
             </CardContent>
         </Card>
     </div>
