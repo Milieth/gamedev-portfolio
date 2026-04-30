@@ -7,41 +7,69 @@ import CarouselNext from "@/components/bearnie/carousel/CarouselNext.astro";
 import CarouselPrevious from "@/components/bearnie/carousel/CarouselPrevious.astro";
 import CarouselDots from "@/components/bearnie/carousel/CarouselDots.astro";
 import GameCard from "@/components/GameCard.astro";
+import Separator from "@/components/bearnie/separator/Separator.astro";
 ---
 
 <BaseLayout title="Milieth's Games">
+  <section> 
     <h1 class="text-4xl flex justify-center">
         My Games
     </h1>
-  <section class="flex justify-center"> 
-    <Carousel class="w-full max-w-5xl" loop={true} autoplay={true}>
-      <CarouselContent>
-        <CarouselItem>
-          <GameCard 
-          title="Masteria Land: Dungeon's Reward"
-          image="/gamedev-portfolio/games-ss/masteria-land.jpg"
-          link="https://milieth.itch.io/masteria-land-dungeons-reward"
-          tags={[
-            { name: "Visual Novel", color: "bg-red-600/80" },
-            { name: "Narrative Game", color: "bg-blue-600/80" },
-            { name: "Renpy", color: "bg-purple-600/80" }]} />
+    <div class="flex justify-center">
+      <Carousel class="w-full max-w-5xl" loop={true} autoplay={true}>
+        <CarouselContent>
+          <CarouselItem>
+            <GameCard 
+              title="Masteria Land: Dungeon's Reward"
+              image="/gamedev-portfolio/games-ss/masteria-land.jpg"
+              link="https://milieth.itch.io/masteria-land-dungeons-reward"
+              tags={[
+                { name: "Visual Novel", color: "bg-red-600/80" },
+                { name: "Narrative Game", color: "bg-blue-600/80" },
+                { name: "Renpy", color: "bg-purple-600/80" }]} />
           </CarouselItem>
           <CarouselItem>
             <GameCard
-            title="Half Moon Duel"
-            image="/gamedev-portfolio/games-ss/half-moon-duel.png"
-            link="https://github.com/Milieth/Half-Moon-Duel"
-            tags={[
-                  { name: "Fan Made", color: "bg-purple-500/80" },
-                  { name: "Board Game", color: "bg-red-600/80" },
-                  { name: "Multiplayer", color: "bg-purple-700/80" },
-                  { name: "Godot", color: "bg-blue-600/80" },
-                  { name: "C#", color: "bg-green-600/80" }]} />
+              title="Half Moon Duel"
+              image="/gamedev-portfolio/games-ss/half-moon-duel.png"
+              link="https://github.com/Milieth/Half-Moon-Duel"
+              tags={[
+                    { name: "Fan Made", color: "bg-purple-500/80" },
+                    { name: "Board Game", color: "bg-red-600/80" },
+                    { name: "Multiplayer", color: "bg-purple-700/80" },
+                    { name: "Godot", color: "bg-blue-600/80" },
+                    { name: "C#", color: "bg-green-600/80" }]} />
           </CarouselItem>
-      </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
-      <CarouselDots count={2} />
-   </Carousel> 
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+        <CarouselDots count={2} />
+      </Carousel> 
+    </div>
+  </section>
+  <Separator class="bg-zinc-400 mt-8 mb-8"/>
+
+  <section> 
+    <h1 class="text-4xl flex justify-center">
+        Also Worked On
+    </h1>
+    <p class="text-xl text-gray-400 flex justify-center">I made a significant contribution to the Games.</p>
+    <div class="flex justify-center">
+      <Carousel class="w-full max-w-5xl" loop={false} autoplay={false}>
+        <CarouselContent>
+          <CarouselItem>
+            <GameCard 
+              title="Trilogi Keluarga Bahagia Side Story: Sulastri the Herbalistelier"
+              image="/gamedev-portfolio/games-ss/sulastri-eternapalace.png"
+              link="https://eternapalace.itch.io/tkbss-sulastri-the-herbaistelier"
+              tags={[
+                { name: "Visual Novel", color: "bg-red-600/80" },
+                { name: "Narrative Game", color: "bg-blue-600/80" },
+                { name: "Renpy", color: "bg-purple-600/80" },
+                { name: "Game Jam", color: "bg-yellow-600/80" }]} />
+          </CarouselItem>
+        </CarouselContent>
+      </Carousel> 
+    </div>
   </section>
 </BaseLayout>
