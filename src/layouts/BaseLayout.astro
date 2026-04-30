@@ -24,7 +24,7 @@ const frontImg = use_lineart_decor
   ? "/gamedev-portfolio/milieth lineart side.png"
   : "/gamedev-portfolio/milieth front.png";
 
-const decorImgOpacity = use_lineart_decor?100:50;
+const decorImgOpacity = use_lineart_decor?80:50;
 ---
 <!doctype html>
 <html lang="en">
@@ -35,9 +35,9 @@ const decorImgOpacity = use_lineart_decor?100:50;
           return localStorage.getItem('theme');
         }
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark';
+          return 'light';
         }
-        return 'light';
+        return 'dark';
       })();
     
       if (theme === 'dark') {
