@@ -23,6 +23,8 @@ const sideImg = use_lineart_decor
 const frontImg = use_lineart_decor 
   ? "/gamedev-portfolio/milieth lineart side.png"
   : "/gamedev-portfolio/milieth front.png";
+
+const decorImgOpacity = use_lineart_decor?100:50;
 ---
 <!doctype html>
 <html lang="en">
@@ -54,16 +56,16 @@ const frontImg = use_lineart_decor
   </head>
   <body class="min-h-screen bg-background text-foreground antialiased">
     <Navigation></Navigation>
-    <div class="absolute inset-0 -z-10 pointer-events-none flex items-center justify-center gap-80">
+    <div class="fixed inset-0 -z-10 pointer-events-none flex items-center justify-center gap-20 md:gap-80 overflow-hidden">
       <img 
-        src={sideImg}
+        src={sideImg} 
         alt="decoration side"
-        class="h-[500px] w-auto object-contain opacity-50"
+        class={`h-[300px] md:h-[500px] w-auto object-contain opacity-${decorImgOpacity}`} 
       />
       <img 
-        src={frontImg}
+        src={frontImg} 
         alt="decoration front"
-        class="h-[500px] w-auto object-contain opacity-50"
+        class={`h-[300px] md:h-[500px] w-auto object-contain opacity-${decorImgOpacity}`} 
       />
     </div>
     <slot />
