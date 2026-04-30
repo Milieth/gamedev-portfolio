@@ -2,17 +2,27 @@
 import "@/styles/global.css";
 import Navigation from "./Navigation.astro";
 import Footer from "./Footer.astro";
-import ThemeToggle from "@/components/ThemeToggle.astro";
+import { boolean } from "astro:schema";
 
 interface Props {
   title?: string;
   description?: string;
+  use_lineart_decor?: boolean;
 }
 
 const { 
   title = "Milieth's Website", 
-  description = "My personal website and portfolio website" 
+  description = "My personal website and portfolio website",
+  use_lineart_decor = true,
 } = Astro.props;
+
+const sideImg = use_lineart_decor 
+  ? "/gamedev-portfolio/milieth lineart side.png" 
+  : "/gamedev-portfolio/milieth side.png";
+
+const frontImg = use_lineart_decor 
+  ? "/gamedev-portfolio/milieth lineart side.png"
+  : "/gamedev-portfolio/milieth front.png";
 ---
 <!doctype html>
 <html lang="en">
@@ -44,6 +54,18 @@ const {
   </head>
   <body class="min-h-screen bg-background text-foreground antialiased">
     <Navigation></Navigation>
+    <div class="absolute inset-0 -z-10 pointer-events-none flex items-center justify-center gap-80">
+      <img 
+        src={sideImg}
+        alt="decoration side"
+        class="h-[500px] w-auto object-contain opacity-50"
+      />
+      <img 
+        src={frontImg}
+        alt="decoration front"
+        class="h-[500px] w-auto object-contain opacity-50"
+      />
+    </div>
     <slot />
     <Footer></Footer>
   </body>
