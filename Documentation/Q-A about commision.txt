@@ -1,0 +1,46 @@
+Title: My Commision Services
+Question:
+1. What is Commission Services?
+2. What is My Commission Services?
+3. Why Open a Commission Services?
+4. What commissions i provide?
+5. What i need to start over?
+6. What is payment method in commission bussiness?
+7. What payment method type i provide?
+8. what payment media/platform i use?
+9. How my commission services workflow?
+10. How much My commission service?
+
+Answer:
+1.a. a paid services, the fee is used to facilitate the service
+ .b. the act to hire someone to create a specific custom piece of work
+2.a. i am the service provider, therefore my commission service is the act to create custom piece of work to help
+     someone project with some payment requirement
+ .b. my commission service is a will to do commission service with someone in need.
+3. first, to help someone project that related to my skill. secondly to facilitate this act of help
+4. Progamming Commission Include:
+ . . Testing Service, a service finding bugs in a project
+ . . Identify Bug Service, identify the bug behaviour and characteristic
+ . . Debugging Service, fixing the bug in a project
+ . . Development Service, develop a new feature and integrate it to the project
+5. first programming devices and tools. and second it's Depending on the service type:
+ . . Testing Service, access to the project product and product design(optional)
+ . . Identify Bug Service, access to the source code (to determine code complexity and bug area).
+ . . Debugging Service, access to the source code(the sc remains private).
+ . . Development Service, access to the source code.
+6. a procedure to deliver the payment from customer to commissioner
+7.a. Milestone based payment, the client pay at the start of each task
+ .b. hourly rate payment, the client hire the commissioner hourly rate 
+8. paypal
+9. design and planning with client -> client pay upfront task payment -> i deliver the product 
+   -> client verify the product -> after all task and product delivered client pay closing payment
+10. to determine the pricing, I need to know these factor:
+  . . code complexity level(high/med/low)
+  . . project or task scale, the more large will result in higher price
+  . the price is based on: starter price + code complexity + project scale
+  . Starter Price List:
+  . . Testing Service, 10$
+  . . Identify Bug Service, 15$
+  . . Debugging Service, 20$
+  . . Development Service, 20$
+  . it is negotiable

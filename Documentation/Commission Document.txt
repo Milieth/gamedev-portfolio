@@ -1,0 +1,36 @@
+Commission Document:
+A. Test Report
+ . Goal:
+ . . Explain checked test case and found bug
+ . Start Requirement:
+ . . access to the game
+ . . access to GDD (optional)
+ . Contain:
+ . . Test Environment
+ . . Test Case
+ . . Caught bug identity
+ . . Visual Attachment (optional)
+B. Technical Bug Report
+ . Goal:
+ . . Explain the scope of the bug in code
+ . Start Requirement:
+ . . access to the game
+ . . access to source code
+ . Contain:
+ . . Test Report
+ . . Reproduce ability
+ . . Bug Area
+ . . Code Complexity
+ . . Visual Attachment (optional)
+C. Development Report
+ . Goal:
+ . . Explain new updates or changes
+ . Start Requirement:
+ . . access to the game
+ . . access to source code
+ . Contain:
+ . . fixing or new feature?
+ . . What is new
+ . . Change made
+ . . Visual Attachment (optional)
+

@@ -1,0 +1,25 @@
+Goal: Add content to My Games section
+Requirement:
+. display with carousel
+. link to itch io page
+. display with screenshot or embedded video
+. display game tage or short description
+
+Component structure:
+. carousel parent
+. . carousel child
+. . . game title
+. . . game screenshot or video
+. . . short description or game tag
+. . . goto game page button
+. . carousel next and prev  button
+. . carousel dot
+
+Task Structure:
+. display carousel parent, dot, and next-prev button
+. . set loop true
+. display carousel child
+. . game title
+. . game screenshot
+. . game tags
+. . goto game page button

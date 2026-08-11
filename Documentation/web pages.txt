@@ -1,0 +1,37 @@
+A. Pages
+. About Me Page
+. . short introduction
+. . link to other page
+. Games Section(Showcase)
+. . game screenshot or video embed
+. . game tag
+. . link to game page itch io
+. Other Project Section
+. . same as games section
+. Contact Section
+. . link tree to sosmed and email
+. Commission Page
+. . status
+. . service
+. . . testing service
+. . . . short brief
+. . . . workflow milestone
+. . . debugging service
+. . . . short brief
+. . . . workflow milestone
+. . . development service
+. . . . short brief
+. . . . workflow milestone
+. . pricing & payment
+. . . pricing
+. . . payment method
+. . about maintenance
+. . . include
+. . . exclude
+. Resume page
+. . Skill and tools
+. . . Languagges
+. . . Game Engine
+. . My Story Page
+
+

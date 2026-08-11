@@ -1,0 +1,24 @@
+Testing Phase:
+. Determine Test goal
+. Determine Test area
+. Create Test Case items
+. . expected behaviour
+. Run the test based on test case
+
+. Test report A: no access to source code
+. . actual behaviour
+. . found bug:
+. . . if yes:
+. . . bug title
+. . . . name
+. . . . brief
+. . . bug severity
+. . . step to reproduce
+. attach test report
+
+. Test report B: can access source code
+. . the same as Test Report A
+. . bug area
+. . code complexity
+. attach bug report
+

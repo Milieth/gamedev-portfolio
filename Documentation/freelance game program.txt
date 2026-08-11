@@ -1,0 +1,14 @@
+Goal: Open commision for freelance game program
+Requirement:
+. describe service type
+. describe milestone
+. describe contract agreement
+. describe pricing(interval)
+. client can see my portfolio
+. client can see my programming langguages
+. client can see my sample code and documentation
+. create sample document and template
+
+desc:
+freelance game program is helping development of game software
+

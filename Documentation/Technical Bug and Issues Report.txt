@@ -1,0 +1,49 @@
+Debugging Phase:
+. Searching phase
+. . Reproduce Issues
+. . Scoping bug
+. . identify bug root cause
+. Fixing Phase:
+. . Redesign Program
+. . Write and Test
+. Repeat and verify the fix
+. Clean Up and documentation
+
+Technical Bug and Issues Report Format:
+. Environment:
+. . Game Version
+. . Test on Platform:
+. . Engine Version:
+. Report Format:
+. . Bug Title
+. . . name
+. . . brief desc
+. . Expected Behaviour
+. . Actual Behaviour
+. . Severity (Block/Major/Minor/Trivial)
+. . Step to reproduce
+. . . Reproduceability(%)
+. . Bug area
+. . Code complexity (High/Med/Low)
+. . Attachment
+
+Detecting Bug Service:
+. Question:
+. . Specific Bug or the whole project Bug?
+. . Can I access your code?
+. . Which one to test? Test Area
+. Start Requirement:
+. . Access to source code
+. Price = 10$ + Project Scale
+. Document:
+. . Technical Bug Report
+
+Debugging Bug Service:
+. Redesign program
+. write and test
+. verify the fix by myself
+. clean up and documentation
+. push to sc to cloud
+. verify the fix to client
+
+

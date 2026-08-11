@@ -1,0 +1,30 @@
+6:40 PM 4/21/2026
+Goal: Create static web game dev portofolio
+Requirement:
+. no playable game just screenshot or video
+. hosting in github pages
+. have about me section, games section, other project section and contact section
+. contain personal story
+
+Component Structure:
+. Section Navigation button
+. . Goto page button
+. Pages
+. . About Me Page
+. . Games Section(Showcase)
+. . Other Project Section
+. . Resume page
+. . Commision status
+. . Contact Section
+
+
+Framework: Astro
+
+ref:
+https://schouffy.github.io/#/
+https://github.com/holger1411/astro-brook
+https://github.com/riceball-tw/letter
+https://github.com/idimilabs/Polyglow#quick-start
+
+https://bearnie.dev/docs/
+
