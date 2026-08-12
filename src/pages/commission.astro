@@ -27,46 +27,85 @@ const isOpen = true;
                 <CardTitle class="text-4xl text-center">VN Development Service</CardTitle>
             </CardHeader>
             <Separator class="bg-zinc-400" />
-            <CardContent class="mt-2">
-                <p>VN or Visual Novel is narrative driven video game that combines text-based storytelling with visual assets, background music, character sprites, and sound effects.</p>
-                <br>
-                <p class="text-base flex items-center gap-2">
-                Game Engine: Renpy
-                <img src="/gamedev-portfolio/icons/renpy.png" class="w-6 h-6" alt="Ren'Py Logo" />
-                </p>                
-                <!-- <Separator class="bg-zinc-400" /> -->
-                <br>
-                <h1 class="text-3xl text-center font-bold">Services Offered</h1>
-                <ul class="list-disc list-outside ml-8 marker:text-3xl marker:text-yellow-300 space-y-4">
-                    <li>
-                        <span class="block text-xl font-bold text-white">Staging and Script Implementation</span>
-                        <p class="text-gray-400 text-sm">Implementing story scripts into Ren'Py script and adding VFX, SFX, BGM, etc., as requested.</p>
-                        <br>
-                        <p class="text-white text-sm">Price: <strong>$15</strong> / 1.000 words</p>
-                        <p class="text-white text-sm">Turnaround Time: 1-2 days per 5.000 words</p>
-                    </li>
-                    <li>
-                        <span class="block text-xl font-bold text-white">GUI Implementation</span>
-                        <p class="text-gray-400 text-sm">Coding custom GUIs based on provided design mockups.</p>
-                        <br>
-                        <p class="text-white text-sm">Price: Starting at <strong>$180</strong> (depend on complexity)</p>
-                        <p class="text-white text-sm">Turnaround Time: 6 days</p>
-                    </li>
-                    <li>
-                        <span class="block text-xl font-bold text-white">Feature or Minigame Development:</span>
-                        <p class="text-gray-400 text-sm">Adding custom features or minigames to your game.</p>
-                        <br>
-                        <p class="text-white text-sm">Price: Starting at <strong>$90</strong> (depend on complexity)</p>
-                        <p class="text-white text-sm">Turnaround Time: 3-6 days</p>
-                    </li>
-                </ul>
-                <br>
-                <h1 class="text-3xl text-center font-bold mb-4">I Won't Accept</h1>
+            <CardContent class="mt-2 space-y-6">
+                <!-- Intro Paragraph -->
+                <p class="text-gray-300 leading-relaxed">
+                    VN or Visual Novel is a narrative-driven video game that combines text-based storytelling with visual assets, background music, character sprites, and sound effects.
+                </p>
 
-                <div class="text-center">
-                <ul class="inline-block text-left list-disc list-inside space-y-4">
-                    <li class="text-gray-300">NSFW Project</li>
-                </ul>
+                <!-- Showcase Image -->
+                <figure class="space-y-2">
+                    <img src="/gamedev-portfolio/games-ss/example.png" alt="VN UI Example" class="w-full rounded-lg border border-zinc-700" />
+                    <figcaption class="text-gray-400 text-xs text-center italic">
+                        Image source: Masteria Land Prologue
+                    </figcaption>
+                </figure>
+
+                <!-- Section: Game Engine -->
+                <div class="space-y-4">
+                    <div class="space-y-1">
+                        <Separator class="bg-zinc-400" />
+                        <h2 class="text-2xl text-center font-bold">Game Engine</h2>
+                        <Separator class="bg-zinc-400" />
+                    </div>
+                    
+                    <div class="flex items-center justify-center gap-3 py-2">
+                        <img src="/gamedev-portfolio/icons/renpy.png" alt="Ren'Py Logo" class="w-12 h-12" />
+                        <span class="text-xl font-semibold">Ren'Py</span>
+                    </div>
+                </div>
+
+                <!-- Section: Services Offered -->
+                <div class="space-y-4">
+                    <div class="space-y-1">
+                        <Separator class="bg-zinc-400" />
+                        <h2 class="text-2xl text-center font-bold">Services Offered</h2>
+                        <Separator class="bg-zinc-400" />
+                    </div>
+                    
+                    <ul class="list-disc list-outside ml-6 marker:text-xl marker:text-yellow-300 space-y-6 pt-2">
+                        <li>
+                            <span class="block text-lg font-bold text-emerald-400">Staging and Script Implementation</span>
+                            <p class="text-gray-400 text-sm mt-1 mb-2">Implementing story scripts into Ren'Py script and adding VFX, SFX, BGM, etc., as requested.</p>
+                            <div class="text-sm space-y-0.5">
+                                <p class="text-white">Price: <strong>$15</strong> / 1,000 words</p>
+                                <p class="text-white">Turnaround Time: 1–2 days per 5,000 words</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="block text-lg font-bold text-emerald-400">GUI Implementation</span>
+                            <p class="text-gray-400 text-sm mt-1 mb-2">Coding custom GUIs based on provided design mockups.</p>
+                            <div class="text-sm space-y-0.5">
+                                <p class="text-white">Price: Starting at <strong>$180</strong> (depends on complexity)</p>
+                                <p class="text-white">Turnaround Time: 6 days</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <span class="block text-lg font-bold text-emerald-400">Feature or Minigame Development</span>
+                            <p class="text-gray-400 text-sm mt-1 mb-2">Adding custom features or minigames to your game.</p>
+                            <div class="text-sm space-y-0.5">
+                                <p class="text-white">Price: Starting at <strong>$90</strong> (depends on complexity)</p>
+                                <p class="text-white">Turnaround Time: 3–6 days</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>      
+
+                <!-- Section: I Won't Accept -->
+                <div class="space-y-4">
+                    <div class="space-y-1">
+                        <Separator class="bg-zinc-400" />
+                        <h2 class="text-2xl text-center font-bold text-red-400">I Won't Accept</h2>
+                        <Separator class="bg-zinc-400" />
+                    </div>
+                    
+                    <div class="text-center py-2">
+                        <ul class="inline-block text-left list-disc list-inside space-y-2">
+                            <li class="text-gray-300">NSFW Projects</li>
+                        </ul>
+                    </div>
                 </div>
             </CardContent>
         </Card>
