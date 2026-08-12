@@ -31,19 +31,29 @@ const isOpen = true;
                 <p>VN or Visual Novel is narrative driven video game that combines text-based storytelling with visual assets, background music, character sprites, and sound effects.</p>
                 <br>
                 <p class="text-base">Game Engine: Renpy</p>
+                <!-- <Separator class="bg-zinc-400" /> -->
                 <h1 class="text-3xl text-center font-bold">Services Offered</h1>
                 <ul class="list-disc list-outside ml-8 marker:text-3xl marker:text-yellow-300 space-y-4">
                     <li>
                         <span class="block text-xl font-bold text-white">Staging and Script Implementation</span>
                         <p class="text-gray-400 text-sm">Implementing story scripts into Ren'Py script and adding VFX, SFX, BGM, etc., as requested.</p>
+                        <br>
+                        <p class="text-white text-sm">Price: <strong>$15</strong> / 1.000 words</p>
+                        <p class="text-white text-sm">Turnaround Time: 1-2 days per 5.000 words</p>
                     </li>
                     <li>
                         <span class="block text-xl font-bold text-white">GUI Implementation</span>
                         <p class="text-gray-400 text-sm">Coding custom GUIs based on provided design mockups.</p>
+                        <br>
+                        <p class="text-white text-sm">Price: Starting at <strong>$180</strong> (depend on complexity)</p>
+                        <p class="text-white text-sm">Turnaround Time: 6 days</p>
                     </li>
                     <li>
                         <span class="block text-xl font-bold text-white">Feature or Minigame Development:</span>
                         <p class="text-gray-400 text-sm">Adding custom features or minigames to your game.</p>
+                        <br>
+                        <p class="text-white text-sm">Price: Starting at <strong>$90</strong> (depend on complexity)</p>
+                        <p class="text-white text-sm">Turnaround Time: 3-6 days</p>
                     </li>
                 </ul>
             </CardContent>
@@ -59,67 +69,50 @@ const isOpen = true;
     <div class="flex w-full justify-center mt-8">
         <Card class="w-[800px] text-white">
             <CardHeader>
-                <CardTitle class="text-4xl text-center font-extrabold tracking-tight">Pricing and Payment</CardTitle>
+                <CardTitle class="text-4xl text-center font-extrabold tracking-tight">Payment</CardTitle>
             </CardHeader>
             <Separator class="bg-zinc-400" />
             <CardContent class="pt-6">
-                <ul class="space-y-8">
-                    <li>
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="h-2 w-2 rounded-full bg-yellow-300"></span>
-                            <h3 class="text-xl font-bold text-white">Pricing</h3>
+
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="h-2 w-2 rounded-full bg-yellow-300"></span>
+                        <h3 class="text-xl font-bold text-white">Payment Platform</h3>
+                    </div>
+                        <div>
+                            <img src="/gamedev-portfolio/icons/paypal.svg" 
+                            alt="Paypal Icon SVG" 
+                            class="w-30 h-30 block ml-4 -my-10"/>
+                            <!-- <p class="text-zinc-500 text-xs uppercase tracking-wider font-semibold">Paypal</p> -->
                         </div>
-                        
-                        <div class="ml-5">
-                            <p class="text-gray-400 text-sm mb-3">Total price is based on these factors:</p>
-                            
-                            <ol class="list-decimal list-outside ml-5 marker:text-white marker:font-bold">
-                                <li class="pl-2">
-                                    <span class="text-gray-200">Starter price</span>
-                                    <ul class="list-disc list-outside ml-4 m-2 space-y-1 marker:text-yellow-300">
-                                        <li class="text-gray-400 text-sm">Testing Service: $10</li>
-                                        <li class="text-gray-400 text-sm">Debugging Service: $20</li>
-                                        <li class="text-gray-400 text-sm">Development Service: $20</li>
-                                    </ul>
+                    <br>
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="h-2 w-2 rounded-full bg-yellow-300"></span>
+                        <h3 class="text-xl font-bold text-white">Payment Methods</h3>
+                    </div>
+                    <div class="ml-5 space-y-3">                        
+                        <div>
+                            <p class="text-gray-200">You may select one of the following payment methods:</p>
+                            <ul class="list-disc list-outside ml-5 space-y-2 marker:text-white">
+                                <li class="text-gray-400 text-sm">
+                                    <strong class="text-gray-200">50% Upfront:</strong> 50% deposit before work begins, remaining 50% upon final completion.
                                 </li>
-                                <li class="pl-2 text-gray-200">Code complexity (high/med/low)</li>
-                                <li class="pl-2 text-gray-200">Project or task scale</li>
-                            </ol>
-                            
-                            <p class="text-zinc-500 text-sm italic mt-4 border-l-2 border-zinc-700 pl-3">
-                                Note: the price may be negotiable
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div class="flex items-center gap-3 mb-2">
-                            <span class="h-2 w-2 rounded-full bg-yellow-300"></span>
-                            <h3 class="text-xl font-bold text-white">Payment Method</h3>
-                        </div>
-
-                        <div class="ml-5 space-y-3">
-                            <div>
-                                <p class="text-gray-300 uppercase">Payment Platform</p>
-                                <img src="/gamedev-portfolio/icons/paypal.svg" 
-                                alt="Paypal Icon SVG" 
-                                class="w-30 h-30 block ml-4 -my-10"/>
-                                <!-- <p class="text-zinc-500 text-xs uppercase tracking-wider font-semibold">Paypal</p> -->
-                            </div>
-                            
-                            <div>
-                                <p class="text-gray-300 uppercase">Payment Type</p>
-                                <ul class="list-disc list-outside ml-5 space-y-2 marker:text-white">
-                                    <li class="text-gray-400 text-sm">
-                                        <strong class="text-gray-200">Upfront Payment:</strong> Client pays at the start of each task.
+                                <li class="text-gray-400 text-sm space-y-2">
+                                <p><strong class="text-gray-200">Milestone Based:</strong> The project is divided into stages.</p>
+                                
+                                <ul class="ml-4 mt-2 space-y-1 font-mono text-sm">
+                                    <p><strong class="text-gray-400">The process works as follows:</p>
+                                    <li class="flex items-center gap-2">
+                                    <span class="text-indigo-400 font-bold">Phase 1:</span> Pay <span class="text-gray-500">&rarr;</span> Complete
                                     </li>
-                                    <li class="text-gray-400 text-sm">
-                                        <strong class="text-gray-200">Milestone Based Payment:</strong> Half at the start and the other half before final delivery.
+                                    <li class="flex items-center gap-2">
+                                    <span class="text-indigo-400 font-bold">Phase 2:</span> Pay <span class="text-gray-500">&rarr;</span> Complete
                                     </li>
+                                    <li class="text-gray-500 italic">Repeat until the project is finished.</li>
                                 </ul>
-                            </div>
+                                </li>                            
+                            </ul>
                         </div>
-                    </li>
+                    </div>
                 </ul>
             </CardContent>
         </Card>
