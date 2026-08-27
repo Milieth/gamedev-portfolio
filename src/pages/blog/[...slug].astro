@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+
+// 1. Ambil semua path yang akan di-generate saat build
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+// 2. Ambil data entri dan render isi markdown
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<html lang="id">
+  <head>
+    <title>{entry.data.title}</title>
+  </head>
+  <body>
+    <article>
+      <h1>{entry.data.title}</h1>
+      <p><em>Ditulis oleh {entry.data.author} pada {entry.data.pubDate.toLocaleDateString('id-ID')}</em></p>
+      
+      <!-- Tag artikel -->
+      <div class="tags">
+        {entry.data.tags.map((tag) => (
+          <a href={`/tags/${tag}`}>#{tag}</a>
+        ))}
+      </div>
+
+      <hr />
+
+      <!-- Render konten markdown -->
+      <Content />
+    </article>
+  </body>
+</html>
