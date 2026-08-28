@@ -1,5 +1,12 @@
 ---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Separator from "@/components/bearnie/separator/Separator.astro";
+import Card from "@/components/bearnie/card/Card.astro"
+import CardContent from "@/components/bearnie/card/CardContent.astro";
+import CardHeader from "@/components/bearnie/card/CardHeader.astro";
+import CardTitle from "@/components/bearnie/card/CardTitle.astro";
 import { getCollection } from 'astro:content';
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
 
 // 1. Ambil semua path yang akan di-generate saat build
 export async function getStaticPaths() {
@@ -13,28 +20,23 @@ export async function getStaticPaths() {
 // 2. Ambil data entri dan render isi markdown
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const author_notes = `Ditulis oleh ${entry.data.author} pada ${entry.data.pubDate.toLocaleDateString('id-ID')}`;
 ---
 
-<html lang="id">
-  <head>
-    <title>{entry.data.title}</title>
-  </head>
-  <body>
-    <article>
-      <h1>{entry.data.title}</h1>
-      <p><em>Ditulis oleh {entry.data.author} pada {entry.data.pubDate.toLocaleDateString('id-ID')}</em></p>
-      
-      <!-- Tag artikel -->
-      <div class="tags">
-        {entry.data.tags.map((tag) => (
-          <a href={`/tags/${tag}`}>#{tag}</a>
-        ))}
-      </div>
-
-      <hr />
-
-      <!-- Render konten markdown -->
-      <Content />
-    </article>
-  </body>
-</html>
+<ArticleLayout author_notes={author_notes} title={entry.data.title}>
+  <!-- Render konten markdown -->
+  <Content />
+  
+  <!-- Tag artikel -->
+  <div class="flex flex-wrap gap-2 my-4">
+    {entry.data.tags.map((tag) => (
+      <a 
+        href={`/gamedev-portfolio/tags/${tag}`}
+        class="text-blue-600 hover:text-blue-800 hover:underline px-2.5 py-1 bg-blue-50 hover:bg-blue-100 rounded-md text-sm font-medium transition-colors"
+      >
+        #{tag}
+      </a>
+    ))}
+  </div>
+  
+</ArticleLayout>

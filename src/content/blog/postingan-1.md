@@ -16,3 +16,7 @@ Ini adalah paragraf pertama di postingan blog saya. Kamu bisa menulis menggunaka
 ### Contoh Kode:
 ```javascript
 console.log("Hello, Astro!");
+```
+
+### Contoh Gambar:
+![Milieth Profile](/gamedev-portfolio/head%20right.png)

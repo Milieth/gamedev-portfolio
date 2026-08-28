@@ -1,0 +1,54 @@
+---
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import { getCollection } from 'astro:content';
+
+// 1. Dapatkan semua rute tag yang valid saat build
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog');
+  
+  // Mengambil seluruh tag unik dari semua artikel
+  const uniqueTags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
+
+  // Membuat halaman untuk setiap tag dan memfilter postingan yang sesuai
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts
+      .filter((post) => post.data.tags.includes(tag))
+      .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+// 2. Ambil parameter URL dan data postingan yang sudah difilter
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+const title = `Artikel Tag: #${tag}`;
+---
+
+<ArticleLayout title={title}>
+  <h1>Hasil Filter Tag: #{tag}</h1>
+  <p>Menampilkan {posts.length} artikel</p>
+
+  <ul>
+    {posts.map((post) => (
+      <li>
+        <a href={`/gamedev-portfolio/blog/${post.slug}/`}>
+          <h2>{post.data.title}</h2>
+        </a>
+        <p>{post.data.description}</p>
+        <time>{post.data.pubDate.toLocaleDateString('id-ID')}</time>
+      </li>
+    ))}
+  </ul>
+</ArticleLayout>
+
+<html lang="id">
+  <head>
+    <title>Artikel Tag: #{tag}</title>
+  </head>
+  <body>
+  </body>
+</html>

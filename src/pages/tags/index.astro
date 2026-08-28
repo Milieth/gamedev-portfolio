@@ -1,0 +1,35 @@
+---
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog');
+
+// 1. Ambil seluruh tag unik dari semua artikel
+const tags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
+
+// 2. Hitung berapa banyak artikel di masing-masing tag
+const tagCounts = tags.reduce((acc, tag) => {
+  acc[tag] = allPosts.filter((post) => post.data.tags.includes(tag)).length;
+  return acc;
+}, {} as Record<string, number>);
+---
+
+<ArticleLayout title="Article Tags" author_notes='ditulis oleh bala bala'>
+  <!-- Link navigasi kembali ke halaman blog utama -->
+  <a href={`${import.meta.env.BASE_URL}/blog`}>← Kembali ke Blog</a>
+
+  <h1>Eksplorasi Berdasarkan Tag</h1>
+  <p>Ditemukan total {tags.length} topik pembahasan.</p>
+
+  <!-- List tag beserta jumlah artikelnya -->
+  <div class="tag-cloud">
+    {tags.map((tag) => (
+      <a 
+        href={`${import.meta.env.BASE_URL}/tags/${tag}`} 
+        class="tag-item"
+      >
+        #{tag} <span>({tagCounts[tag]})</span>
+      </a>
+    ))}
+  </div>
+</ArticleLayout>

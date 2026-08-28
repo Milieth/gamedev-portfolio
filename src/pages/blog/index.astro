@@ -1,4 +1,5 @@
 ---
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
 // Mengambil seluruh file dari folder src/content/blog/
@@ -10,23 +11,18 @@ const posts = allPosts.sort(
 );
 ---
 
-<html lang="id">
-  <head>
-    <title>Blog Saya</title>
-  </head>
-  <body>
-    <h1>Daftar Artikel</h1>
+<ArticleLayout title="Welcome to My Blog">
+  <h1 class="text-2xl text-emerald-400 font-bold">Daftar Artikel</h1>
 
-    <ul>
-      {posts.map((post) => (
-        <li>
-          <a href={`/gamedev-portfolio/blog/${post.slug}/`}>
-            <h2>{post.data.title}</h2>
-          </a>
-          <p>{post.data.description}</p>
-          <time>{post.data.pubDate.toLocaleDateString('id-ID')}</time>
-        </li>
-      ))}
-    </ul>
-  </body>
-</html>
+  <ul class="list-disc list-outside ml-6 marker:text-xl marker:text-yellow-300 space-y-6 pt-2">
+    {posts.map((post) => (
+      <li>
+        <a href={`/gamedev-portfolio/blog/${post.slug}/`}>
+          <h2>{post.data.title}</h2>
+        </a>
+        <p>{post.data.description}</p>
+        <time>{post.data.pubDate.toLocaleDateString('id-ID')}</time>
+      </li>
+    ))}
+  </ul>
+</ArticleLayout>

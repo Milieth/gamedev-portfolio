@@ -51,37 +51,37 @@ const socialLinks = [
 ---
 
 <BaseLayout title="Milieth's Contact">
-    <div class="flex w-full justify-center mt-8">
-        <Card class="w-[800px]">
-            <CardHeader>
-                <CardTitle class="text-4xl text-center">Contact List</CardTitle>
-            </CardHeader>
-            <Separator class="bg-zinc-400" />
-            <CardContent class="mt-2">
-              <p>Feel free to get in touch, I love discussing about maths and programming, or maybe you just want to say hi?.</p>
-              <p class="text-zinc-500 italic mt-4 mb-10 border-l-2 border-zinc-700 pl-3">
-                Note: If you want a fast response, send me an email. Thanks!</p>
-              {socialLinks.map((link) => (
-                <div class="flex items-center gap-4 mt-2"> 
-                  <Button 
-                    class="w-[170px] flex justify-start items-center px-4 ml-5"
-                    style={{ height: `${buttonSize}px` }} 
-                    href={link.url}
-                  >
-                    <img 
-                      src={link.icon}
-                      alt={`${link.name} icon`}
-                      style={{ height: `${iconSize}px` }}
-                      class="mr-2"
-                      slot="left-icon"
-                    />
-                    {link.name}
-                </Button>
+  <div class="flex w-full justify-center mt-8">
+    <Card class="w-[800px]">
+        <CardHeader>
+            <CardTitle class="text-4xl text-center">Contact List</CardTitle>
+        </CardHeader>
+        <Separator class="bg-zinc-400" />
+        <CardContent class="mt-2">
+          <p>Feel free to get in touch, I love discussing about maths and programming, or maybe you just want to say hi?.</p>
+          <p class="text-zinc-500 italic mt-4 mb-10 border-l-2 border-zinc-700 pl-3">
+            Note: If you want a fast response, send me an email. Thanks!</p>
+          {socialLinks.map((link) => (
+            <div class="flex items-center gap-4 mt-2"> 
+              <Button 
+                class="w-[170px] flex justify-start items-center px-4 ml-5"
+                style={{ height: `${buttonSize}px` }} 
+                href={link.url}
+              >
+                <img 
+                  src={link.icon}
+                  alt={`${link.name} icon`}
+                  style={{ height: `${iconSize}px` }}
+                  class="mr-2"
+                  slot="left-icon"
+                />
+                {link.name}
+            </Button>
 
-                <p class="m-0 text-xl items-center underline decoration-blue-500 underline-offset-4">
-                  {link.username}</p>
-              </div>))}
-            </CardContent>
-        </Card>
-    </div>
+            <p class="m-0 text-xl items-center underline decoration-blue-500 underline-offset-4">
+              {link.username}</p>
+          </div>))}
+        </CardContent>
+    </Card>
+  </div>
 </BaseLayout>
