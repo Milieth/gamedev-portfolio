@@ -1,10 +1,4 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import Separator from "@/components/bearnie/separator/Separator.astro";
-import Card from "@/components/bearnie/card/Card.astro"
-import CardContent from "@/components/bearnie/card/CardContent.astro";
-import CardHeader from "@/components/bearnie/card/CardHeader.astro";
-import CardTitle from "@/components/bearnie/card/CardTitle.astro";
 import { getCollection } from 'astro:content';
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
 
@@ -25,8 +19,10 @@ const author_notes = `Ditulis oleh ${entry.data.author} pada ${entry.data.pubDat
 
 <ArticleLayout author_notes={author_notes} title={entry.data.title}>
   <!-- Render konten markdown -->
-  <Content />
-  
+  <div class="prose prose-invert max-w-none">
+    <Content />
+  </div>  
+
   <!-- Tag artikel -->
   <div class="flex flex-wrap gap-2 my-4">
     {entry.data.tags.map((tag) => (

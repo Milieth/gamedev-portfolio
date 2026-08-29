@@ -2,13 +2,16 @@
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-// Mengambil seluruh file dari folder src/content/blog/
 const allPosts = await getCollection('blog');
 
-// Mengurutkan postingan dari yang terbaru
-const posts = allPosts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+const posts = allPosts.sort((a, b) => {
+  // Ganti 'welcome' sesuai dengan slug file markdown artikel Welcome Anda
+  if (a.slug === 'welcome') return -1;
+  if (b.slug === 'welcome') return 1;
+
+  // Untuk artikel sisanya, urutkan berdasarkan tanggal terbaru
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+});
 ---
 
 <ArticleLayout title="Welcome to My Blog">
@@ -17,11 +20,16 @@ const posts = allPosts.sort(
   <ul class="list-disc list-outside ml-6 marker:text-xl marker:text-yellow-300 space-y-6 pt-2">
     {posts.map((post) => (
       <li>
-        <a href={`/gamedev-portfolio/blog/${post.slug}/`}>
+        <a 
+          href={`/gamedev-portfolio/blog/${post.slug}/`} 
+          class="text-blue-500 underline hover:text-blue-400 font-semibold"
+        >
           <h2>{post.data.title}</h2>
         </a>
-        <p>{post.data.description}</p>
-        <time>{post.data.pubDate.toLocaleDateString('id-ID')}</time>
+        <p class="text-gray-300 text-sm mt-1">{post.data.description}</p>
+        <time class="text-xs text-gray-400 block mt-1">
+          {post.data.pubDate.toLocaleDateString('id-ID')}
+        </time>
       </li>
     ))}
   </ul>
