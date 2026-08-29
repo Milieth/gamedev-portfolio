@@ -2,29 +2,35 @@
 import { getCollection } from 'astro:content';
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
 
-// 1. Ambil semua path yang akan di-generate saat build
+// function to get/load .md in content folder
+// this function during path discovery
+// https://docs.astro.build/en/guides/routing/
+// https://docs.astro.build/en/guides/content-collections/
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
+
   return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
 }
 
-// 2. Ambil data entri dan render isi markdown
+// get page (.md) properties, and render them 
+// this code below evaluated during page rendering (after path discovery)
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const author_notes = `Ditulis oleh ${entry.data.author} pada ${entry.data.pubDate.toLocaleDateString('id-ID')}`;
 ---
 
 <ArticleLayout author_notes={author_notes} title={entry.data.title}>
-  <!-- Render konten markdown -->
+  <!-- markdown content (post pages)
+  use prose for automatically styling -->
   <div class="prose prose-invert max-w-none">
     <Content />
   </div>  
 
 
-  <!-- Tag artikel -->
+  <!-- article tag -->
   <div class="tag-cloud flex flex-wrap gap-2.5 my-4">
     {entry.data.tags.map((tag) => (
       <a 

@@ -2,19 +2,22 @@
 import ArticleLayout from '@/layouts/ArticleLayout.astro';
 import { getCollection } from 'astro:content';
 
-// 1. Dapatkan semua rute tag yang valid saat build
+// generate tag page for each unique tag found in .md file 
+// the tag page include filetered post (post with that tags)
 export async function getStaticPaths() {
   const allPosts = await getCollection('blog');
-  
-  // Mengambil seluruh tag unik dari semua artikel
+
+  // get all unique tags found in all post
+  // the result is in array format e.g: ['javascript', 'astro', 'react']
   const uniqueTags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
 
-  // Membuat halaman untuk setiap tag dan memfilter postingan yang sesuai
   return uniqueTags.map((tag) => {
+    // filter the post by each tag and sort it in descending order from newest to oldest
     const filteredPosts = allPosts
       .filter((post) => post.data.tags.includes(tag))
       .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
+    // determine url tag (the params keyword). and passing Astro.props
     return {
       params: { tag },
       props: { posts: filteredPosts },
@@ -22,9 +25,10 @@ export async function getStaticPaths() {
   });
 }
 
-// 2. Ambil parameter URL dan data postingan yang sudah difilter
+// get current target tag and filtered post associated witht that tag
 const { tag } = Astro.params;
 const { posts } = Astro.props;
+// create dynamic title for each tag
 const title = `Artikel Tag: #${tag}`;
 ---
 

@@ -4,10 +4,10 @@ import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
 
-// 1. Ambil seluruh tag unik dari semua artikel
+// get all unique tags
 const tags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
 
-// 2. Hitung berapa banyak artikel di masing-masing tag
+// create a record<tag, tag_count> for each unique tags 
 const tagCounts = tags.reduce((acc, tag) => {
   acc[tag] = allPosts.filter((post) => post.data.tags.includes(tag)).length;
   return acc;

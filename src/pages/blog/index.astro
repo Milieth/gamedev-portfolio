@@ -4,12 +4,12 @@ import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog');
 
+// sort all posts in descending order from newest to oldest
 const posts = allPosts.sort((a, b) => {
-  // Ganti 'welcome' sesuai dengan slug file markdown artikel Welcome Anda
-  if (a.slug === 'welcome') return -1;
-  if (b.slug === 'welcome') return 1;
+  // pin post named welcome.md (always on top)
+  if (a.slug === 'welcome') return -1;  // put 'a' before 'b'
+  if (b.slug === 'welcome') return 1;   // put 'b' before 'a'
 
-  // Untuk artikel sisanya, urutkan berdasarkan tanggal terbaru
   return b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
 });
 ---
