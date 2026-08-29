@@ -3,7 +3,7 @@ title: "Welcome Post 📌"
 pubDate: 2026-08-27
 description: "Mengapa aku bikin blog?"
 author: "Milieth"
-tags: ["welcome"]
+tags: ["welcome", "introduction"]
 ---
 
 _"Disclaimer: The reason this blog is written in Indonesian isn't because my English is bad, but because I want to express myself more effectively."_

@@ -28,27 +28,25 @@ const { posts } = Astro.props;
 const title = `Artikel Tag: #${tag}`;
 ---
 
-<ArticleLayout title={title}>
-  <h1>Hasil Filter Tag: #{tag}</h1>
-  <p>Menampilkan {posts.length} artikel</p>
+<ArticleLayout title={title} use_back_navigation={true} use_alltags_navigation={true}>
+  <h1 class="text-xl">Hasil Filter Tag: #{tag}</h1>
+  <p class="mt-2 mb-2">Menampilkan {posts.length} artikel</p>
 
-  <ul>
+  <ul class="list-disc list-outside ml-6 marker:text-xl marker:text-yellow-300 space-y-6 pt-2">
     {posts.map((post) => (
       <li>
-        <a href={`/gamedev-portfolio/blog/${post.slug}/`}>
+        <a href={`/gamedev-portfolio/blog/${post.slug}/`}
+           class="text-blue-500 underline hover:text-blue-400 font-semibold">
           <h2>{post.data.title}</h2>
         </a>
+
         <p>{post.data.description}</p>
-        <time>{post.data.pubDate.toLocaleDateString('id-ID')}</time>
+
+        <time class="text-xs text-gray-400 block mt-1">
+          {post.data.pubDate.toLocaleDateString('id-ID')}
+        </time>
       </li>
     ))}
   </ul>
-</ArticleLayout>
 
-<html lang="id">
-  <head>
-    <title>Artikel Tag: #{tag}</title>
-  </head>
-  <body>
-  </body>
-</html>
+</ArticleLayout>

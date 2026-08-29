@@ -14,21 +14,17 @@ const tagCounts = tags.reduce((acc, tag) => {
 }, {} as Record<string, number>);
 ---
 
-<ArticleLayout title="Article Tags" author_notes='ditulis oleh bala bala'>
-  <!-- Link navigasi kembali ke halaman blog utama -->
-  <a href={`${import.meta.env.BASE_URL}/blog`}>← Kembali ke Blog</a>
-
+<ArticleLayout title="Artikel Tags" use_alltags_navigation={false}>
   <h1>Eksplorasi Berdasarkan Tag</h1>
   <p>Ditemukan total {tags.length} topik pembahasan.</p>
 
-  <!-- List tag beserta jumlah artikelnya -->
-  <div class="tag-cloud">
+  <div class="tag-cloud flex flex-wrap gap-2.5 my-4">
     {tags.map((tag) => (
       <a 
         href={`${import.meta.env.BASE_URL}/tags/${tag}`} 
-        class="tag-item"
+        class="tag-item text-blue-300 hover:text-white bg-blue-950/60 hover:bg-blue-600 border border-blue-800/80 hover:border-blue-500 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
       >
-        #{tag} <span>({tagCounts[tag]})</span>
+        #{tag} <span class="text-blue-400/80 text-xs ml-1 font-semibold">({tagCounts[tag]})</span>
       </a>
     ))}
   </div>

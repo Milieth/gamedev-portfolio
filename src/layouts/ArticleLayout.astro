@@ -9,11 +9,15 @@ import CardTitle from "@/components/bearnie/card/CardTitle.astro";
 interface Props {
   title?: string;
   author_notes?: string;
+  use_back_navigation?: boolean;
+  use_alltags_navigation?: boolean;
 }
 
 const { 
   title = "Milieth's Article",
   author_notes = "",
+  use_back_navigation = true,
+  use_alltags_navigation = true,
 } = Astro.props;
 ---
 
@@ -28,6 +32,20 @@ const {
         <p class="text-sm text-gray-400 block mt-1"><em>{author_notes}</em></p>
         <article>
           <slot />
+
+          {use_back_navigation && (
+            <div class="mt-8 pt-4 border-t border-gray-700">
+              <a href="/gamedev-portfolio/blog/" class="inline-flex items-center text-blue-500 hover:text-blue-400 font-medium">
+                ← Lihat semua artikel
+              </a>
+            </div>
+
+          )}
+          {use_alltags_navigation && (
+            <a href="/gamedev-portfolio/tags/" class="inline-flex items-center text-blue-500 hover:text-blue-400 font-medium">
+              ← Lihat semua tag
+            </a>
+          )}
         </article>
       </CardContent>
     </Card>

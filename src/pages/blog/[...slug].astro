@@ -23,12 +23,13 @@ const author_notes = `Ditulis oleh ${entry.data.author} pada ${entry.data.pubDat
     <Content />
   </div>  
 
+
   <!-- Tag artikel -->
-  <div class="flex flex-wrap gap-2 my-4">
+  <div class="tag-cloud flex flex-wrap gap-2.5 my-4">
     {entry.data.tags.map((tag) => (
       <a 
         href={`/gamedev-portfolio/tags/${tag}`}
-        class="text-blue-600 hover:text-blue-800 hover:underline px-2.5 py-1 bg-blue-50 hover:bg-blue-100 rounded-md text-sm font-medium transition-colors"
+        class="tag-item text-blue-300 hover:text-white bg-blue-950/60 hover:bg-blue-600 border border-blue-800/80 hover:border-blue-500 px-3 py-1.5 rounded-lg text-sm font-medium transition-all"
       >
         #{tag}
       </a>

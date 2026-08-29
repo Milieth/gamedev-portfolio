@@ -1,9 +1,9 @@
 ---
-title: "Postingan ke 3"
+title: "Postingan ke 2"
 pubDate: 2026-08-28
 description: "Langkah awal membangun Postingan ke 2"
 author: "Milieth"
-tags: ["astro", "devlog", "tiga"]
+tags: ["astro", "devlog", "dua"]
 ---
 
 ## Halo Dunia!
