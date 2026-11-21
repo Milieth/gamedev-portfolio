@@ -5,17 +5,6 @@ description: "Aku ikut CDGCT game jam sebagai VN programmer."
 author: "Milieth"
 tags: ["game jam", "dev-story", "vn", "programmer"]
 ---
-
-<!-- ## Halo Dunia!
-
-Ini adalah paragraf kedua di postingan blog saya. Kamu bisa menulis menggunakan format **Markdown** standar seperti:
-
-- List poin 1
-- List poin 2
-
-### Contoh Kode:
-```javascript
-console.log("Hello, Astro!"); -->
 Assalamu'alaikum (Salam sejahtera untukmu)
 
 Awalnya aku scroll-scroll di discord dan menemukan share-sharean game jam. akun yang nge-share ini sebenarnya rajin banget nge-share game jam, jadi aku penasaran dimana ngecheck nya kok sepertinya ada banyak banget game jam ini (di mindset ku lomba game diadakan 1-3 per tahun). trus dengan pertanyaan itu aku terjun ke itch.io. dan memang ada 100+ game jam di itch.io setiap tahunnya. Setelah lihat itu aku jadi ingin ikut karena ya pertama lagi gabut, trus bisa buat porto juga, nambah pengalaman kerja tim. Tentu karena aku ga ada tim dan ga kuat solo wkwk (salut sama yang ikut jam solo) jadi nyari tim yang open. aku ga asal join aku cari yang konsep nya menarik dan cocok karena nanti bakal kerja bareng lama biasanya 1 bulan atau 2 bulan, jadi yang konsep nya yaoi jelas aku skip. singkat cerita aku nemu yang cocok dan itu di CGDCT jam (Cute Girl Doing Cool Thing) karena konsep menarik idenya langsung aku PM orangnya dan aku dimasukin grup private khusus untuk game nya Hostage Heart!
